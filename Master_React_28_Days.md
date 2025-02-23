@@ -1,98 +1,173 @@
-# **Master React in 28 Days**
-## **Project-Based Learning + Theory (50/50 Split)**
+# **Master React in 28 Days** <!-- omit in toc -->
+## **Project-Based Learning + Theory (50/50 Split)** <!-- omit in toc -->
 
 **4-week plan** with **highly-detailed daily breakdowns**, prioritizing [The Odin Project](https://www.theodinproject.com/paths/full-stack-javascript/courses/react)
 ’s curriculum React Course (80-90% focus), supplemented by [Full Stack Open](https://fullstackopen.com/en/part1/introduction_to_react)
  (10-20%), and integrating the **Automated Financial Report Generator** as the Final Project. The plan avoids new tools, leveraging React + ChatGPT API with foundational web stack JS/HTML/CSS skills:
 
-*Generated w/ DeepSeek DeepThink (R1) + Search*
+ *Generated w/ DeepSeek DeepThink (R1) + Search*
 
 ---
 
-### **Week 1: React Foundations**  
-**Goal**: Components, JSX, state/props, and CV Application.  
-**FSO Usage**: 10% (supplemental theory only).  
+- [**High-Level Weekly Overview**](#high-level-weekly-overview)
+  - [**Week 1: React Foundations**](#week-1-react-foundations)
+  - [**Week 2: Intermediate React**](#week-2-intermediate-react)
+  - [**Week 3: Routing \& Advanced State**](#week-3-routing--advanced-state)
+  - [**Week 4: Final Project**](#week-4-final-project)
+  - [**Final Project Features**:](#final-project-features)
+  - [**Optional Stretch Goals** (Post-Day 28):](#optional-stretch-goals-post-day-28)
+  - [**Daily Workflow Example** (6 Hours):](#daily-workflow-example-6-hours)
+- [**Detailed Daily Breakdowns**](#detailed-daily-breakdowns)
+  - [**Day 1: Intro to React \& Components**](#day-1-intro-to-react--components)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs)
+    - [**Coding (4 hrs)**](#coding-4-hrs)
+    - [**Review (30 mins)**](#review-30-mins)
+    - [**Deliverables for Day 1**](#deliverables-for-day-1)
+  - [**Day 2: Setup \& Component Architecture**](#day-2-setup--component-architecture)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-1)
+    - [**Coding (4 hrs)**](#coding-4-hrs-1)
+    - [**Review (30 mins)**](#review-30-mins-1)
+    - [**Deliverables for Day 2**](#deliverables-for-day-2)
+  - [**Day 3: Dynamic Lists \& Keys**](#day-3-dynamic-lists--keys)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-2)
+    - [**Coding (4 hrs)**](#coding-4-hrs-2)
+    - [**Review (30 mins)**](#review-30-mins-2)
+    - [**Deliverables for Day 3**](#deliverables-for-day-3)
+  - [**Day 4: Passing Data Between Components**](#day-4-passing-data-between-components)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-3)
+    - [**Coding (4 hrs)**](#coding-4-hrs-3)
+    - [**Review (30 mins)**](#review-30-mins-3)
+    - [**Deliverables for Day 4**](#deliverables-for-day-4)
+  - [**Day 5: State Management Basics**](#day-5-state-management-basics)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-4)
+    - [**Coding (4 hrs)**](#coding-4-hrs-4)
+    - [**Review (30 mins)**](#review-30-mins-4)
+    - [**Deliverables for Day 5**](#deliverables-for-day-5)
+  - [**Day 6: CV Application (Styling \& Deployment)**](#day-6-cv-application-styling--deployment)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-5)
+    - [**Coding (4 hrs)**](#coding-4-hrs-5)
+    - [**Review (30 mins)**](#review-30-mins-5)
+    - [**Deliverables for Day 6**](#deliverables-for-day-6)
+  - [**Day 7: Review \& Debug**](#day-7-review--debug)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-6)
+    - [**Coding (4 hrs)**](#coding-4-hrs-6)
+    - [**Review (30 mins)**](#review-30-mins-6)
+    - [**Deliverables for Day 7**](#deliverables-for-day-7)
+  - [**Day 8: Side Effects \& `useEffect`**](#day-8-side-effects--useeffect)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-7)
+    - [**Coding (4 hrs)**](#coding-4-hrs-7)
+    - [**Review (30 mins)**](#review-30-mins-7)
+    - [**Deliverables for Day 8**](#deliverables-for-day-8)
+  - [**Day 9: Memory Card Project (Setup)**](#day-9-memory-card-project-setup)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-8)
+    - [**Coding (4 hrs)**](#coding-4-hrs-8)
+    - [**Review (30 mins)**](#review-30-mins-8)
+    - [**Deliverables for Day 9**](#deliverables-for-day-9)
+  - [**Day 10: Memory Card Project (Finish)**](#day-10-memory-card-project-finish)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-9)
+    - [**Coding (4 hrs)**](#coding-4-hrs-9)
+    - [**Review (30 mins)**](#review-30-mins-9)
+    - [**Deliverables for Day 10**](#deliverables-for-day-10)
+  - [**Day 11: Class-Based Components**](#day-11-class-based-components)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-10)
+    - [**Coding (4 hrs)**](#coding-4-hrs-10)
+    - [**Review (30 mins)**](#review-30-mins-10)
+    - [**Deliverables for Day 11**](#deliverables-for-day-11)
+  - [**Day 12: React Testing**](#day-12-react-testing)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-11)
+    - [**Coding (4 hrs)**](#coding-4-hrs-11)
+    - [**Review (30 mins)**](#review-30-mins-11)
+    - [**Deliverables for Day 12**](#deliverables-for-day-12)
+  - [**Day 13: Type Checking With PropTypes**](#day-13-type-checking-with-proptypes)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-12)
+    - [**Coding (4 hrs)**](#coding-4-hrs-12)
+    - [**Review (30 mins)**](#review-30-mins-12)
+    - [**Deliverables for Day 13**](#deliverables-for-day-13)
+  - [**Day 14: React Router**](#day-14-react-router)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-13)
+    - [**Coding (4 hrs)**](#coding-4-hrs-13)
+    - [**Review (30 mins)**](#review-30-mins-13)
+    - [**Deliverables for Day 14**](#deliverables-for-day-14)
+  - [**Day 15: Fetching Data in React**](#day-15-fetching-data-in-react)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-14)
+    - [**Coding (4 hrs)**](#coding-4-hrs-14)
+    - [**Review (30 mins)**](#review-30-mins-14)
+    - [**Deliverables for Day 15**](#deliverables-for-day-15)
+  - [**Day 16: Managing State With Context API**](#day-16-managing-state-with-context-api)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-15)
+    - [**Coding (4 hrs)**](#coding-4-hrs-15)
+    - [**Review (30 mins)**](#review-30-mins-15)
+    - [**Deliverables for Day 16**](#deliverables-for-day-16)
+  - [**Day 17: Reducing State With `useReducer`**](#day-17-reducing-state-with-usereducer)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-16)
+    - [**Coding (4 hrs)**](#coding-4-hrs-16)
+    - [**Review (30 mins)**](#review-30-mins-16)
+    - [**Deliverables for Day 17**](#deliverables-for-day-17)
+  - [**Day 18: Refs and Memoization**](#day-18-refs-and-memoization)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-17)
+    - [**Coding (4 hrs)**](#coding-4-hrs-17)
+    - [**Review (30 mins)**](#review-30-mins-17)
+    - [**Deliverables for Day 18**](#deliverables-for-day-18)
+  - [**Day 19: Shopping Cart Project (Setup)**](#day-19-shopping-cart-project-setup)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-18)
+    - [**Coding (4 hrs)**](#coding-4-hrs-18)
+    - [**Review (30 mins)**](#review-30-mins-18)
+    - [**Deliverables for Day 19**](#deliverables-for-day-19)
+  - [**Day 20: Shopping Cart Project (Finish)**](#day-20-shopping-cart-project-finish)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-19)
+    - [**Coding (4 hrs)**](#coding-4-hrs-19)
+    - [**Review (30 mins)**](#review-30-mins-19)
+    - [**Deliverables for Day 20**](#deliverables-for-day-20)
+  - [**Final Adjustments**](#final-adjustments)
+  - [**Day 21: Final Project (Setup)**](#day-21-final-project-setup)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-20)
+    - [**Coding (4 hrs)**](#coding-4-hrs-20)
+    - [**Review (30 mins)**](#review-30-mins-20)
+    - [**Deliverables for Day 21**](#deliverables-for-day-21)
+  - [**Day 22: Final Project (Data Processing \& Report Generation)**](#day-22-final-project-data-processing--report-generation)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-21)
+    - [**Coding (4 hrs)**](#coding-4-hrs-21)
+    - [**Review (30 mins)**](#review-30-mins-21)
+    - [**Deliverables for Day 22**](#deliverables-for-day-22)
+  - [**Day 23: Final Project (Report History \& Persistence)**](#day-23-final-project-report-history--persistence)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-22)
+    - [**Coding (4 hrs)**](#coding-4-hrs-22)
+    - [**Review (30 mins)**](#review-30-mins-22)
+    - [**Deliverables for Day 23**](#deliverables-for-day-23)
+  - [**Day 24: Final Project (Styling \& Polish)**](#day-24-final-project-styling--polish)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-23)
+    - [**Coding (4 hrs)**](#coding-4-hrs-23)
+    - [**Review (30 mins)**](#review-30-mins-23)
+    - [**Deliverables for Day 24**](#deliverables-for-day-24)
+  - [**Day 25: Final Project (Export \& Deployment)**](#day-25-final-project-export--deployment)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-24)
+    - [**Coding (4 hrs)**](#coding-4-hrs-24)
+    - [**Review (30 mins)**](#review-30-mins-24)
+    - [**Deliverables for Day 25**](#deliverables-for-day-25)
+  - [**Day 26: Final Polish**](#day-26-final-polish)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-25)
+    - [**Coding (4 hrs)**](#coding-4-hrs-25)
+    - [**Review (30 mins)**](#review-30-mins-25)
+    - [**Deliverables for Day 26**](#deliverables-for-day-26)
+  - [**Day 27: Documentation**](#day-27-documentation)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-26)
+    - [**Coding (4 hrs)**](#coding-4-hrs-26)
+    - [**Review (30 mins)**](#review-30-mins-26)
+    - [**Deliverables for Day 27**](#deliverables-for-day-27)
+  - [**Day 28: Final Review \& Showcase**](#day-28-final-review--showcase)
+    - [**Theory (1.5 hrs)**](#theory-15-hrs-27)
+    - [**Coding (4 hrs)**](#coding-4-hrs-27)
+    - [**Review (30 mins)**](#review-30-mins-27)
+    - [**Deliverables for Day 28**](#deliverables-for-day-28)
+  - [**Final Project Summary**](#final-project-summary)
+  - [**Next Steps**](#next-steps)
 
-| **Day** | **Focus**                                                                 | **Tasks**                                                                                                  |
-|---------|---------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| 1       | **Intro to React** + Components                                           | Build static components (e.g., `Header`, `Bio`) using JSX.                                                 |
-| 2       | **State/Props** + Dynamic Rendering                                       | Create an interactive counter; pass props between parent/child components.                                 |
-| 3       | **Rendering Lists** + **Keys**                                            | Render a list of skills/experiences with unique keys for the CV project.                                   |
-| 4       | **Project: CV Application** (Setup)                                       | Structure reusable components (e.g., `EducationSection`, `WorkHistory`).                                  |
-| 5       | **State Management** in CV App                                            | Add edit/save toggles for sections using `useState`.                                                       |
-| 6       | **Styling** + Deployment                                                  | Style with CSS modules; deploy to GitHub Pages.                                                            |
-| 7       | **Review** + Debug                                                        | Refactor code and add PropTypes for type safety.                                                           |
 
 ---
 
-### **Week 2: Intermediate React**  
-**Goal**: Side effects, API calls, testing.  
-**FSO Usage**: 15% (API/data fetching examples).  
 
-| **Day** | **Focus**                                                                 | **Tasks**                                                                                                  |
-|---------|---------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| 8       | **Side Effects** + `useEffect`                                            | Fetch data from a public API (e.g., display stock prices using [Alpha Vantage](https://www.alphavantage.co/)). |
-| 9       | **Project: Memory Card** (Setup)                                          | Implement card-flipping logic with `useState` and `useEffect`.                                             |
-| 10      | **Class Components** + Lifecycle                                          | Convert a functional component to class-based (e.g., timer for game moves).                                |
-| 11      | **Testing** (Jest/RTL)                                                    | Write tests for CV App buttons and state changes.                                                          |
-| 12      | **Styling Deep Dive**                                                     | Style Memory Card with animations (CSS transitions).                                                       |
-| 13      | **Project: Memory Card** (Finish)                                         | Add score tracking and high-score persistence with `localStorage`.                                         |
-| 14      | **Review** + API Error Handling                                           | Handle API errors gracefully; deploy Memory Card.                                                          |
+## **High-Level Weekly Overview**
 
----
-
-### **Week 3: Routing & Advanced State**  
-**Goal**: React Router, Context API, Shopping Cart.  
-**FSO Usage**: 10% (routing patterns).  
-
-| **Day** | **Focus**                                                                 | **Tasks**                                                                                                  |
-|---------|---------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| 15      | **React Router**                                                          | Build a multi-page app (e.g., e-commerce site with `/products` and `/cart` routes).                        |
-| 16      | **Context API** + Global State                                            | Implement a dark/light theme switcher for the router app.                                                  |
-| 17      | **Project: Shopping Cart** (Setup)                                        | Create product listings and cart state with `useContext`.                                                  |
-| 18      | **Cart Logic** + API Integration                                          | Fetch product data from a mock API; handle add/remove items.                                               |
-| 19      | **Performance** (`useMemo`/`useCallback`)                                 | Optimize cart re-renders; add loading skeletons.                                                           |
-| 20      | **Testing** the Shopping Cart                                             | Write integration tests for cart functionality.                                                            |
-| 21      | **Deployment** + Polish                                                   | Deploy to Netlify; add responsive styling.                                                                 |
-
----
-
-### **Week 4: Final Project**  
-**Automated Financial Report Generator**  
-**Tech**: React, ChatGPT API, HTML/CSS.  
-**Key Skills Tested**: API integration, forms, state, component architecture.  
-
-| **Day** | **Milestone**                                                             | **Tasks**                                                                                                  |
-|---------|---------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| 22      | **Project Setup**                                                         | - Create React app <br>- Design components: `ReportForm`, `DataParser`, `ReportViewer` <br>- Set up ChatGPT API client. |
-| 23      | **Form Handling** + Data Fetching                                         | - Build a form to input ticker symbols/dates <br>- Fetch SEC filing summaries via ChatGPT API.             |
-| 24      | **Data Parsing & Display**                                                | - Transform API responses into tables/charts <br>- Use `useReducer` for complex state (e.g., parsed data). |
-| 25      | **Export Features** + Error Handling                                      | - Add PDF/CSV export with `react-pdf` or `file-saver` <br>- Handle API errors and loading states.          |
-| 26      | **Styling** + Final Polish                                                | - Style with Tailwind CSS <br>- Add animations for transitions.                                            |
-| 27      | **Testing** + Debugging                                                   | - Write tests for form submission and data rendering <br>- Fix edge cases.                                 |
-| 28      | **Deployment** + Documentation                                            | - Deploy to Netlify <br>- Write a README explaining features and tech stack.                               |
-
----
-
-### **Final Project Features**:  
-1. **User Input**: Form to input company ticker/date range.  
-2. **AI Parsing**: Use ChatGPT API to summarize SEC filings/earnings calls.  
-3. **Data Visualization**: Display key metrics (revenue, EPS) in tables/charts.  
-4. **Export**: Generate downloadable PDF/CSV reports.  
-5. **Error Handling**: Graceful UI for API failures or invalid inputs.  
-
-### **Adjustments**:  
-- **FSO Minimized**: Only referenced for API best practices (Part 2) and testing (Part 5).  
-- **Optional Messaging App**: Added as a stretch goal post-Day 28 if time permits.  
-- **No New Tools**: ChatGPT API integrates via REST (familiar from Week 2).  
-
-This plan balances TOP’s hands-on projects with just enough theory to reinforce concepts. 
-
----
-
-Here’s a **daily task breakdown** for your **4-week React mastery plan**, optimized for your **6-hour daily schedule** and focused on TOP’s curriculum (80-90%) with minimal FSO supplementation. The **Automated Financial Report Generator** is the Final Project, with clear daily milestones:
-
----
 
 ### **Week 1: React Foundations**  
 **Goal**: Build core React skills and complete the CV Application.  
@@ -176,7 +251,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
----
+## **Detailed Daily Breakdowns**
 
 ### **Day 1: Intro to React & Components**  
 **Goal**: Understand React basics, set up a project, and build static components.  
@@ -289,7 +364,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 1**  
+#### **Deliverables for Day 1**  
 1. A React app with:  
    - A `Header` component displaying a title.  
    - A `Footer` component with a copyright notice.  
@@ -506,7 +581,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 2**  
+#### **Deliverables for Day 2**  
 1. A React app with:  
    - A `Header` component with navigation links.  
    - A `Main` component containing `Bio`, `Skills`, and `Projects` sections.  
@@ -711,7 +786,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 3**  
+#### **Deliverables for Day 3**  
 1. A React app with:  
    - A dynamic `Skills` list rendered using keys.  
    - A dynamic `Projects` list with descriptions and unique keys.  
@@ -919,7 +994,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 4**  
+#### **Deliverables for Day 4**  
 1. A React app with:  
    - A `Header` component displaying a title.  
    - A `UserProfile` component containing `UserInfo`, `UserSkills`, and `UserProjects` sections.  
@@ -1094,7 +1169,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 5**  
+#### **Deliverables for Day 5**  
 1. A React app with:  
    - A `Header` component displaying a title.  
    - Interactive buttons to toggle the visibility of `Education` and `WorkHistory` sections.  
@@ -1314,7 +1389,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 6**  
+#### **Deliverables for Day 6**  
 1. A React app with:  
    - A styled `Header` component.  
    - Interactive buttons to toggle the visibility of `Education` and `WorkHistory` sections.  
@@ -1457,7 +1532,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 7**  
+#### **Deliverables for Day 7**  
 1. A refactored CV Application with:  
    - Reusable components and custom hooks.  
    - Clean, maintainable code.  
@@ -1687,7 +1762,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 8**  
+#### **Deliverables for Day 8**  
 1. A React app with:  
    - A `Header` component displaying a title.  
    - A `WeatherDisplay` component fetching and displaying weather data.  
@@ -1928,7 +2003,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 9**  
+#### **Deliverables for Day 9**  
 1. A React app with:  
    - A `Header` component displaying a title.  
    - A `GameBoard` component managing card state and interactions.  
@@ -2107,7 +2182,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 10**  
+#### **Deliverables for Day 10**  
 1. A React app with:  
    - A `Header` component displaying a title.  
    - A `GameBoard` component with animations and a reset button.  
@@ -2304,7 +2379,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 11**  
+#### **Deliverables for Day 11**  
 1. A React app with:  
    - A `Header` component displaying a title.  
    - A `Timer` component implemented as a class-based component.  
@@ -2429,7 +2504,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 12**  
+#### **Deliverables for Day 12**  
 1. A React app with:  
    - Tests for the `Header`, `Education`, and `WorkHistory` components in the CV Application.  
    - Tests for the `Card` component in the Memory Card game.  
@@ -2616,7 +2691,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 13**  
+#### **Deliverables for Day 13**  
 1. A React app with:  
    - PropTypes for the `Header`, `Education`, and `WorkHistory` components in the CV Application.  
    - PropTypes for the `Card` component in the Memory Card game.  
@@ -2843,7 +2918,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 14**  
+#### **Deliverables for Day 14**  
 1. A React app with:  
    - A `Header` component with navigation links.  
    - A `Footer` component with a copyright notice.  
@@ -3082,7 +3157,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 15**  
+#### **Deliverables for Day 15**  
 1. A React app with:  
    - A `Header` component displaying a title.  
    - A `UserProfile` component fetching and displaying GitHub user data.  
@@ -3308,7 +3383,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 16**  
+#### **Deliverables for Day 16**  
 1. A React app with:  
    - A `Header` component displaying a title.  
    - A `Content` component displaying the current theme.  
@@ -3570,7 +3645,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 17**  
+#### **Deliverables for Day 17**  
 1. A React app with:  
    - A `Header` component displaying a title.  
    - A `TaskList` component managing tasks with `useReducer`.  
@@ -3787,7 +3862,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 18**  
+#### **Deliverables for Day 18**  
 1. A React app with:  
    - A `Header` component displaying a title.  
    - A `FocusableInput` component using `useRef`.  
@@ -4041,7 +4116,7 @@ Here’s a **daily task breakdown** for your **4-week React mastery plan**, opti
 
 ---
 
-### **Deliverables for Day 19**  
+#### **Deliverables for Day 19**  
 1. A React app with:  
    - A `Header` component displaying a title.  
    - A `ProductList` component displaying products.  
@@ -4256,7 +4331,7 @@ Here’s **Day 20** with the same level of detail, focusing on completing the Sh
 
 ---
 
-### **Deliverables for Day 20**  
+#### **Deliverables for Day 20**  
 1. A React app with:  
    - A fully functional cart displaying items, totals, and a checkout button.  
    - Global state management for adding/removing items and clearing the cart.  
@@ -4517,7 +4592,7 @@ Here’s **Day 20** with the same level of detail, focusing on completing the Sh
 
 ---
 
-### **Deliverables for Day 21**  
+#### **Deliverables for Day 21**  
 1. A React app with:  
    - A `Header` component displaying a title.  
    - An `InputForm` component for fetching stock data.  
@@ -4646,7 +4721,7 @@ Here’s **Day 20** with the same level of detail, focusing on completing the Sh
 
 ---
 
-### **Deliverables for Day 22**  
+#### **Deliverables for Day 22**  
 1. A React app with:  
    - A `ReportDisplay` component showing generated reports.  
    - Integration with the ChatGPT API for report generation.  
@@ -4779,7 +4854,7 @@ Here’s **Day 20** with the same level of detail, focusing on completing the Sh
 
 ---
 
-### **Deliverables for Day 23**  
+#### **Deliverables for Day 23**  
 1. A React app with:  
    - A `ReportHistory` component displaying past reports.  
    - Persistence of reports using `localStorage`.  
@@ -4960,7 +5035,7 @@ Here’s **Day 20** with the same level of detail, focusing on completing the Sh
 
 ---
 
-### **Deliverables for Day 24**  
+#### **Deliverables for Day 24**  
 1. A React app with:  
    - A polished UI with animations and responsive design.  
    - A loading spinner for report generation.  
@@ -5140,7 +5215,7 @@ Here’s **Day 20** with the same level of detail, focusing on completing the Sh
 
 ---
 
-### **Deliverables for Day 25**  
+#### **Deliverables for Day 25**  
 1. A React app with:  
    - PDF and CSV export functionality.  
    - Deployment to Netlify.  
@@ -5254,7 +5329,7 @@ Here’s **Day 20** with the same level of detail, focusing on completing the Sh
 
 ---
 
-### **Deliverables for Day 26**  
+#### **Deliverables for Day 26**  
 1. A React app with:  
    - Error handling for invalid inputs and API errors.  
    - Accessibility improvements (ARIA labels, keyboard navigation).  
@@ -5410,7 +5485,7 @@ Here’s **Day 20** with the same level of detail, focusing on completing the Sh
 
 ---
 
-### **Deliverables for Day 27**  
+#### **Deliverables for Day 27**  
 1. A React app with:  
    - A comprehensive `README.md` file.  
    - Inline comments explaining key components and functions.  
@@ -5475,7 +5550,7 @@ Here’s **Day 20** with the same level of detail, focusing on completing the Sh
 
 ---
 
-### **Deliverables for Day 28**  
+#### **Deliverables for Day 28**  
 1. A React app with:  
    - All features working as expected.  
    - No bugs or performance issues.  
